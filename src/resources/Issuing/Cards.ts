@@ -165,6 +165,16 @@ export interface Card {
   personalization_design: string | PersonalizationDesign | null;
 
   /**
+   * The product code the card is currently enrolled under. `product_graduation_state` reflects any in-flight product graduation and whether the card network has confirmed it.
+   */
+  product_code?: string | null;
+
+  /**
+   * State of the product graduation request on this card. Only present when a product graduation has been requested.
+   */
+  product_graduation_state?: Card.ProductGraduationState | null;
+
+  /**
    * The program that this card belongs to — will not be nil.
    */
   program?: string | null;
@@ -237,6 +247,18 @@ export namespace Card {
 
   export interface LifecycleControls {
     cancel_after: LifecycleControls.CancelAfter;
+  }
+
+  export interface ProductGraduationState {
+    /**
+     * Status of the product graduation request. `pending` while awaiting card network confirmation, `succeeded` once confirmed, `failed` if rejected.
+     */
+    state: ProductGraduationState.State;
+
+    /**
+     * The product code the card graduation is targeting.
+     */
+    target_product_code: string | null;
   }
 
   export interface Redaction {
@@ -395,6 +417,10 @@ export namespace Card {
        */
       payment_count: number;
     }
+  }
+
+  export namespace ProductGraduationState {
+    export type State = 'failed' | 'pending' | 'succeeded';
   }
 
   export namespace Redaction {
@@ -1496,6 +1522,11 @@ export namespace Issuing {
      * The desired PIN for this card.
      */
     pin?: CardCreateParams.Pin;
+
+    /**
+     * The product code to request via product graduation.
+     */
+    product_code?: string;
 
     /**
      * The card this is meant to be a replacement for (if any).
@@ -2654,6 +2685,11 @@ export namespace Issuing {
      * The desired new PIN for this card.
      */
     pin?: CardUpdateParams.Pin;
+
+    /**
+     * The product code to request via product graduation.
+     */
+    product_code?: string;
 
     /**
      * Updated shipping information for the card.

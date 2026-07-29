@@ -1266,7 +1266,7 @@ export namespace Account {
     current_deadline: number | null;
 
     /**
-     * Fields that need to be resolved to keep the account enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the account is disabled.
+     * Fields that need to be resolved to keep the account enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the account will be disabled.
      */
     currently_due: Array<string> | null;
 
