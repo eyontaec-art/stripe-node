@@ -18385,6 +18385,7 @@ declare namespace StripeConstructor {
             }
           }
           export namespace BusinessDetails {
+            export type AdditionalAddress = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.AdditionalAddress;
             export type Address = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.Address;
             export type AnnualRevenue = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.AnnualRevenue;
             export type Documents = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.Documents;
@@ -18394,6 +18395,9 @@ declare namespace StripeConstructor {
             export type ScriptAddresses = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.ScriptAddresses;
             export type ScriptNames = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.ScriptNames;
             export type Structure = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.Structure;
+            export namespace AdditionalAddress {
+              export type Purpose = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.AdditionalAddress.Purpose;
+            }
             export namespace Documents {
               export type BankAccountOwnershipVerification = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.Documents.BankAccountOwnershipVerification;
               export type CompanyLicense = Stripe_.V2.Core.AccountCreateParams.Identity.BusinessDetails.Documents.CompanyLicense;
@@ -19294,6 +19298,7 @@ declare namespace StripeConstructor {
             }
           }
           export namespace BusinessDetails {
+            export type AdditionalAddress = Stripe_.V2.Core.Account.Identity.BusinessDetails.AdditionalAddress;
             export type Address = Stripe_.V2.Core.Account.Identity.BusinessDetails.Address;
             export type AnnualRevenue = Stripe_.V2.Core.Account.Identity.BusinessDetails.AnnualRevenue;
             export type Documents = Stripe_.V2.Core.Account.Identity.BusinessDetails.Documents;
@@ -19303,6 +19308,9 @@ declare namespace StripeConstructor {
             export type ScriptAddresses = Stripe_.V2.Core.Account.Identity.BusinessDetails.ScriptAddresses;
             export type ScriptNames = Stripe_.V2.Core.Account.Identity.BusinessDetails.ScriptNames;
             export type Structure = Stripe_.V2.Core.Account.Identity.BusinessDetails.Structure;
+            export namespace AdditionalAddress {
+              export type Purpose = Stripe_.V2.Core.Account.Identity.BusinessDetails.AdditionalAddress.Purpose;
+            }
             export namespace Documents {
               export type BankAccountOwnershipVerification = Stripe_.V2.Core.Account.Identity.BusinessDetails.Documents.BankAccountOwnershipVerification;
               export type CompanyLicense = Stripe_.V2.Core.Account.Identity.BusinessDetails.Documents.CompanyLicense;
@@ -19493,6 +19501,7 @@ declare namespace StripeConstructor {
             }
           }
           export namespace BusinessDetails {
+            export type AdditionalAddress = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.AdditionalAddress;
             export type AnnualRevenue = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.AnnualRevenue;
             export type Documents = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.Documents;
             export type IdNumber = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.IdNumber;
@@ -19501,6 +19510,9 @@ declare namespace StripeConstructor {
             export type ScriptAddresses = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.ScriptAddresses;
             export type ScriptNames = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.ScriptNames;
             export type Structure = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.Structure;
+            export namespace AdditionalAddress {
+              export type Purpose = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.AdditionalAddress.Purpose;
+            }
             export namespace Documents {
               export type BankAccountOwnershipVerification = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.Documents.BankAccountOwnershipVerification;
               export type CompanyLicense = Stripe_.V2.Core.AccountTokenCreateParams.Identity.BusinessDetails.Documents.CompanyLicense;
@@ -19858,6 +19870,9 @@ declare namespace StripeConstructor {
             export namespace ManagedBy {
               export type Application = Stripe_.V2.Iam.ActivityLog.Details.ApiKey.ManagedBy.Application;
             }
+          }
+          export namespace UserRoles {
+            export type Source = Stripe_.V2.Iam.ActivityLog.Details.UserRoles.Source;
           }
         }
       }

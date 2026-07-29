@@ -6002,7 +6002,7 @@ describe('Generated tests', function() {
     const {ControlledByAlternateResourceError} = require('../../src/Error.js');
 
     nock('https://api.stripe.com')
-      .post('/v2/money_management/outbound_setup_intents')
+      .post('/v2/core/vault/us_bank_accounts/id_123/confirm_microdeposits')
       .reply(400, {
         error: {
           type: 'controlled_by_alternate_resource',
@@ -6011,7 +6011,9 @@ describe('Generated tests', function() {
       });
 
     try {
-      await realStripe.v2.moneyManagement.outboundSetupIntents.create();
+      await realStripe.v2.core.vault.usBankAccounts.confirmMicrodeposits(
+        'id_123'
+      );
       expect.fail('Expected error');
     } catch (err) {
       expect(err).to.be.instanceOf(ControlledByAlternateResourceError);
